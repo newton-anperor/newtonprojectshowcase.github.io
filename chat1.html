@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chat1</title>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/adminlte.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <style>
+    .student_dp {
+      height: 50px;
+      width: 50px;
+    }
+
+    .student_chat_dp {
+      height: 60px;
+      width: 60px;
+    }
+
+    .student-chat {
+      display: none;
+    }
+
+    .show-chat {
+      display: block;
+    }
+
+    .hide-list {
+      display: none;
+    }
+  </style>
+</head>
+<body class="py-5 bg-transparent">
+  <section class="m-auto border position-relative bg-white rounded-lg shadow" style="width: 25vw; height: 75vh;">
+    <!-- list -->
+
+    <div class="container student-chatprofile-list p-2 position-relative">
+      <h4 class="text-bold pl-2">Chats</h4>
+
+      <!-- search box -->
+      <form action="" class="d-flex border bg-light border pl-2 rounded-pill">
+        <input type="text" class="text-gray bg-transparent form-control border-0" name="search_chat" id="search_id" placeholder="search">
+        <button type="submit" class="btn" name="submit_search">
+          <i class="fa fa-search text-gray"></i>
+        </button>
+      </form>
+
+      <div class="m-0 pt-2 " >
+        <ul class="m-0 p-0 overflow-auto" style="height: 58vh;">
+
+          <li class="d-flex pt-1">
+            <a href="#" class="text-gray d-flex mr-auto link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 chat-profile" data-chat="show__chat">
+              <div class="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxAW5GA4HRfyIXe33iMKUuz0TSxbEuDG5E0A&s" alt="student profile" class="rounded-circle student_dp">
+              </div>
+              <div class="pl-2">
+                <p class="pb-0 fw-semibold mb-0">Student 1</p>
+                <p class="pt-0 text-secondary small">sent monday</p>
+              </div>
+            </a>
+            <div class="dropdown">
+              <button class="btn text-gray border-0 rounded-circle shadow-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-ellipsis-h"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item d-flex" href="#">mark as read
+                  <i class="fas fa-check-double ml-auto pt-1"></i>
+                </a></li>
+                <li><a class="dropdown-item d-flex" href="#">mute
+                  <i class="far fa-bell-slash ml-auto pt-2"></i>
+                </a></li>
+                <li><a class="dropdown-item d-flex" href="#">remove
+                  <i class="ml-auto fw-bold pr-1">x</i>
+                </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="d-flex pt-1">
+            <a href="#" class="text-gray d-flex mr-auto link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 chat-profile" data-chat="show__chat">
+              <div class="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxAW5GA4HRfyIXe33iMKUuz0TSxbEuDG5E0A&s" alt="student profile" class="rounded-circle student_dp">
+              </div>
+              <div class="pl-2">
+                <p class="pb-0 fw-semibold mb-0">Student 1</p>
+                <p class="pt-0 text-secondary small">sent monday</p>
+              </div>
+            </a>
+            <div class="dropdown">
+              <button class="btn text-gray border-0 rounded-circle shadow-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-ellipsis-h"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item d-flex" href="#">mark as read
+                  <i class="fas fa-check-double ml-auto pt-1"></i>
+                </a></li>
+                <li><a class="dropdown-item d-flex" href="#">mute
+                  <i class="far fa-bell-slash ml-auto pt-2"></i>
+                </a></li>
+                <li><a class="dropdown-item d-flex" href="#">remove
+                  <i class="ml-auto fw-bold pr-1">x</i>
+                </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="d-flex pt-1">
+            <a href="#" class="text-gray d-flex mr-auto link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 chat-profile" data-chat="show__chat">
+              <div class="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxAW5GA4HRfyIXe33iMKUuz0TSxbEuDG5E0A&s" alt="student profile" class="rounded-circle student_dp">
+              </div>
+              <div class="pl-2">
+                <p class="pb-0 fw-semibold mb-0">Student 1</p>
+                <p class="pt-0 text-secondary small">sent monday</p>
+              </div>
+            </a>
+            <div class="dropdown">
+              <button class="btn text-gray border-0 rounded-circle shadow-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-ellipsis-h"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item d-flex" href="#">mark as read
+                  <i class="fas fa-check-double ml-auto pt-1"></i>
+                </a></li>
+                <li><a class="dropdown-item d-flex" href="#">mute
+                  <i class="far fa-bell-slash ml-auto pt-2"></i>
+                </a></li>
+                <li><a class="dropdown-item d-flex" href="#">remove
+                  <i class="ml-auto fw-bold pr-1">x</i>
+                </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="d-flex pt-1">
+            <a href="#" class="text-gray d-flex mr-auto link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 chat-profile" data-chat="show__chat">
+              <div class="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxAW5GA4HRfyIXe33iMKUuz0TSxbEuDG5E0A&s" alt="student profile" class="rounded-circle student_dp">
+              </div>
+              <div class="pl-2">
+                <p class="pb-0 fw-semibold mb-0">Student 1</p>
+                <p class="pt-0 text-secondary small">sent monday</p>
+              </div>
+            </a>
+            <div class="dropdown">
+              <button class="btn text-gray border-0 rounded-circle shadow-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-ellipsis-h"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item d-flex" href="#">mark as read
+                  <i class="fas fa-check-double ml-auto pt-1"></i>
+                </a></li>
+                <li><a class="dropdown-item d-flex" href="#">mute
+                  <i class="far fa-bell-slash ml-auto pt-2"></i>
+                </a></li>
+                <li><a class="dropdown-item d-flex" href="#">remove
+                  <i class="ml-auto fw-bold pr-1">x</i>
+                </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="d-flex pt-1">
+            <a href="#" class="text-gray d-flex mr-auto link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 chat-profile" data-chat="show__chat">
+              <div class="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxAW5GA4HRfyIXe33iMKUuz0TSxbEuDG5E0A&s" alt="student profile" class="rounded-circle student_dp">
+              </div>
+              <div class="pl-2">
+                <p class="pb-0 fw-semibold mb-0">Student 1</p>
+                <p class="pt-0 text-secondary small">sent monday</p>
+              </div>
+            </a>
+            <div class="dropdown">
+              <button class="btn text-gray border-0 rounded-circle shadow-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-ellipsis-h"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item d-flex" href="#">mark as read
+                  <i class="fas fa-check-double ml-auto pt-1"></i>
+                </a></li>
+                <li><a class="dropdown-item d-flex" href="#">mute
+                  <i class="far fa-bell-slash ml-auto pt-2"></i>
+                </a></li>
+                <li><a class="dropdown-item d-flex" href="#">remove
+                  <i class="ml-auto fw-bold pr-1">x</i>
+                </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="d-flex pt-1">
+            <a href="#" class="text-gray d-flex mr-auto link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 chat-profile" data-chat="show__chat">
+              <div class="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxAW5GA4HRfyIXe33iMKUuz0TSxbEuDG5E0A&s" alt="student profile" class="rounded-circle student_dp">
+              </div>
+              <div class="pl-2">
+                <p class="pb-0 fw-semibold mb-0">Student 1</p>
+                <p class="pt-0 text-secondary small">sent monday</p>
+              </div>
+            </a>
+            <div class="dropdown">
+              <button class="btn text-gray border-0 rounded-circle shadow-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-ellipsis-h"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item d-flex" href="#">mark as read
+                  <i class="fas fa-check-double ml-auto pt-1"></i>
+                </a></li>
+                <li><a class="dropdown-item d-flex" href="#">mute
+                  <i class="far fa-bell-slash ml-auto pt-2"></i>
+                </a></li>
+                <li><a class="dropdown-item d-flex" href="#">remove
+                  <i class="ml-auto fw-bold pr-1">x</i>
+                </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="d-flex pt-1">
+            <a href="#" class="text-gray d-flex mr-auto link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 chat-profile" data-chat="show__chat">
+              <div class="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxAW5GA4HRfyIXe33iMKUuz0TSxbEuDG5E0A&s" alt="student profile" class="rounded-circle student_dp">
+              </div>
+              <div class="pl-2">
+                <p class="pb-0 fw-semibold mb-0">Student 1</p>
+                <p class="pt-0 text-secondary small">sent monday</p>
+              </div>
+            </a>
+            <div class="dropdown">
+              <button class="btn text-gray border-0 rounded-circle shadow-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-ellipsis-h"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item d-flex" href="#">mark as read
+                  <i class="fas fa-check-double ml-auto pt-1"></i>
+                </a></li>
+                <li><a class="dropdown-item d-flex" href="#">mute
+                  <i class="far fa-bell-slash ml-auto pt-2"></i>
+                </a></li>
+                <li><a class="dropdown-item d-flex" href="#">remove
+                  <i class="ml-auto fw-bold pr-1">x</i>
+                </a></li>
+              </ul>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- chat -->
+    <div class="student-chat" id="show__chat">
+      <!-- chat navbar  -->
+      <div class="navbar border-bottom d-flex">
+        <button class="btn border-0 p-2 px-3 shadow-sm rounded-circle" onclick="hideChat()">
+          <i class="fa fa-arrow-left" style="font-size: 18px;"></i>
+        </button>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxAW5GA4HRfyIXe33iMKUuz0TSxbEuDG5E0A&s" alt="student profile" class="rounded-circle student_dp">
+        <p class="fw-bold mr-auto px-2 pt-3">Student Name</p>
+        <div class="dropdown">
+          <button class="btn text-gray border-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-ellipsis-h"></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item d-flex" href="#">profile
+              <i class="fas fa-user-circle ml-auto pr-1 pt-1"></i>
+            </a></li>
+            <li><a class="dropdown-item d-flex" href="#">mute
+              <i class="far fa-bell-slash ml-auto pt-1"></i>
+            </a></li>
+            <li><a class="dropdown-item d-flex" href="#">remove
+              <i class="ml-auto fw-bold pr-1">x</i>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- chat section -->
+       <div class="">
+        <ul class="p-2 overflow-auto" style="height: 52vh;">
+
+          <!-- profile summary in chat -->
+          <div class="d-flex pt-4 justify-content-center p-0 m-0">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxAW5GA4HRfyIXe33iMKUuz0TSxbEuDG5E0A&s" alt="student profile" class="rounded-circle student_chat_dp">
+          </div>
+          <div class="text-center small p-0 m-0">
+            <h5 class="fw-semibold">Student Name</h5>
+            <p>Enrolled In <br><strong>"Example Course"</strong></p>
+          </div>
+
+          <!-- chats -->
+
+          <li class="d-flex mw-100">
+            <div class="d-flex">
+              <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxAW5GA4HRfyIXe33iMKUuz0TSxbEuDG5E0A&s" alt="" class="rounded-circle student_dp">
+              </div>
+              <div class="pl-2">
+                <p class="small bg-light rounded-lg w-75 p-2 mr-auto mr-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="d-flex">
+                  <p class="small mr-auto text-secondary">
+                    04:15 PM | Aug 22
+                  </p>
+                  <i class="text-gray small ml-auto">seen</i>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="d-flex mw-100">
+            <div class="d-flex">
+              <div class="pl-2">
+                <p class="small bg-blue rounded-lg w-75 p-2 ml-auto mr-1">Voluptatum, totam natus similique accusantium ducimus soluta ut incidunt qui cum repellat consectetur quo!</p>
+                <div class="d-flex">
+                  <i class="text-gray small mr-auto">sent</i>
+                  <p class="small ml-auto text-secondary">
+                    04:35 PM | Aug 22
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img src="https://www.imagella.com/cdn/shop/products/446750e145cfe79bef39fc865d414835.jpg?v=1692501806" alt="" class="rounded-circle student_dp">
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="d-flex align-items-center px-1">
+          <div class="">
+            <img src="https://www.imagella.com/cdn/shop/products/446750e145cfe79bef39fc865d414835.jpg?v=1692501806" class="border rounded-circle"
+              alt="avatar 3" style="width: 40px; height: 100%;">
+          </div>
+
+          <form action="" class="d-flex border bg-light border pr-1 pl-2 rounded-pill">
+            <input type="text" class="text-gray bg-transparent form-control border-0" name="__message" placeholder="type Message">
+            <input type="file" id="pick_file" name="pick_file" accept="image/png, image/jpeg" style="display:none;" />
+            <a class="p-2 text-muted" id="pick_file_btn">
+                <i class="fas fa-paperclip"></i>
+            </a>
+            <button type="submit" class="btn" name="submit_message">
+              <i class="fa fa-paper-plane text-gray"></i>
+            </button>
+          </form>
+        </div>
+
+       </div>
+
+    </div>
+
+  </section>
+
+  <script>
+    const pick_file = document.getElementById('pick_file_btn');
+    const fileInput = document.getElementById('pick_file');
+    pick_file.addEventListener('click', function(event) {
+        event.preventDefault();
+        fileInput.click();
+    });
+    document.querySelectorAll('.chat-profile').forEach(profile => {
+        profile.addEventListener('click', function () {
+            document.querySelector('.student-chatprofile-list').classList.add('hide-list');
+            document.querySelectorAll('.student-chat').forEach(chat => chat.classList.remove('show-chat'));
+            const chatId = this.getAttribute('data-chat');
+            document.getElementById(chatId).classList.add('show-chat');
+        });
+    });
+
+    function hideChat() {
+        document.querySelector('.student-chatprofile-list').classList.remove('hide-list');
+        document.querySelectorAll('.student-chat').forEach(chat => chat.classList.remove('show-chat'));
+    }
+  </script>
+
+</body>
+</html>
