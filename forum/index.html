@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forum</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
+            rel="stylesheet" />
+        <script
+            src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="bg-gray-950 text-white">
+        
+
+        <!-- navigation -->
+        <nav
+            class="bg-gray-900 fixed h-screen w-16 md:w-64 top-0 left-0 transition-width  duration-300">
+            <div
+                class="flex flex-col items-center md:items-start justify-between h-full p-3 space-y-6">
+                <div class>
+                    <!-- Logo -->
+                    <a href="#"
+                        class="flex items-center md:space-x-3 md:w-full">
+                        <img
+                            src="https://lms.ridenepal.com.np/images/company/1672032028.png"
+                            class="h-8 md:mr-3" alt="Logo" />
+                        <span
+                            class="hidden md:block text-white text-sm font-medium">Australian
+                            Careers College</span>
+                    </a>
+                    <!-- Search Button -->
+                    <button data-modal-target="searchbox-modal" data-modal-toggle="searchbox-modal" class="rounded-full border border-gray-500 md:w-full p-1 mt-8 md:mt-3 items-center justify-center flex bg-white ">
+                        <span 
+                            class="hidden md:block text-gray-400 p-1 pl-4">Search</span>
+                        <i class="fa-solid fa-search p-2 ml-auto rounded-full text-gray-800"></i>
+                    </button>
+                </div>
+                <!-- Navigation links -->
+                <ul class="flex flex-col w-full space-y-4">
+                    <!-- Home -->
+                    <li>
+                        <a href="#"
+                            class="flex items-center justify-center md:justify-normal py-2 md:p-2  space-x-3 hover:bg-gray-800 rounded text-gray-400 group">
+                            <i
+                                class="fa-solid fa-house group-hover:text-blue-500"></i>
+                            <span class="hidden md:block text-white">Home</span>
+                        </a>
+                    </li>
+                    <!-- Courses -->
+                    <li>
+                        <a href="#"
+                            class="flex items-center space-x-3 hover:bg-gray-800 justify-center md:justify-normal py-2 md:p-2 rounded text-gray-400 group">
+                            <i
+                                class="fa-solid fa-book group-hover:text-blue-500"></i>
+                            <span
+                                class="hidden md:block text-white">Courses</span>
+                        </a>
+                    </li>
+                    <!-- notification -->
+                    <li>
+                        <a href="#"
+                            class="flex items-center space-x-3 hover:bg-gray-800 justify-center md:justify-normal py-2 md:p-2 rounded text-gray-400 group">
+                            <i
+                                class="fa-solid fa-bell group-hover:text-blue-500"></i>
+                            <span
+                                class="hidden md:block text-white">Notifications</span>
+                        </a>
+                    </li>
+                    <!-- Classmate -->
+                    <li>
+                        <a href="#"
+                            class="flex items-center space-x-3 hover:bg-gray-800 justify-center md:justify-normal py-2 md:p-2 rounded text-gray-400 group">
+                            <i
+                                class="fa-solid fa-users group-hover:text-blue-500"></i>
+                            <span
+                                class="hidden md:block text-white">Classmate</span>
+                        </a>
+                    </li>
+                    <!-- Schedule -->
+                    <li>
+                        <a href="#"
+                            class="flex items-center space-x-3 hover:bg-gray-800 justify-center md:justify-normal py-2 md:p-2 rounded text-gray-400 group">
+                            <i
+                                class="fa-solid fa-calendar-alt group-hover:text-blue-500"></i>
+                            <span
+                                class="hidden md:block text-white">Schedule</span>
+                        </a>
+                    </li>
+                    <!-- Community -->
+                    <li>
+                        <a href="#"
+                            class="flex items-center space-x-3 hover:bg-gray-800 justify-center md:justify-normal py-2 md:p-2 rounded text-gray-400 group">
+                            <i
+                                class="fa-solid fa-comments group-hover:text-blue-500"></i>
+                            <span
+                                class="hidden md:block text-white">Community</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Profile -->
+                <a href="#"
+                    class="flex items-center md:p-2 md:hover:bg-gray-800 cursor-pointer w-full rounded text-gray-400 group">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQwsd2Kkt6yILLJufjZgK9vb6oh1yKV6vIHw&s" alt="Profile" class="rounded-full w-8 h-8">
+                    <span class="hidden md:block ml-2 text-white">Profile</span>
+                </a>
+            </div>
+        </nav>
+
+
+        <!-- search box -->
+        <div id="searchbox-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative p-4 w-full max-w-md max-h-full">
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                            Search
+                        </h3>
+                        <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="searchbox-modal">
+                            <i class="fa fa-close" aria-hidden="true"></i>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="p-4 md:p-5">
+                        <form class="space-y-4" action="#">
+                            <div>
+                                <label for="search" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Search Here</label>
+                                <input type="text" name="search-text" id="search-text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Search" />
+                            </div>
+                            <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+
+        <!-- Main Content -->
+        <div class="ml-14 md:ml-64 p-4">
+
+            <div class="max-w-2xl mx-auto py-8">    
+
+                <!-- Post Box -->
+                <div class="bg-gray-900 rounded-lg p-4">
+                    <div class="flex items-start md:space-x-4">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQwsd2Kkt6yILLJufjZgK9vb6oh1yKV6vIHw&s" alt="Profile" class="rounded-full w-12 h-12">
+                        <textarea placeholder="What is happening?!"
+                            class="bg-transparent border-0 w-full rounded-lg p-2 resize-none focus:outline-none text-gray-200"></textarea>
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                        <div class="flex space-x-4 text-blue-500">
+                            <i class="fa fa-image cursor-pointer"></i>
+                            <i class="fa fa-smile cursor-pointer"></i>
+                            <i class="fa fa-calendar cursor-pointer"></i>
+                            <i class="fa fa-paperclip cursor-pointer"></i>
+                        </div>
+                        <button
+                            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Post</button>
+                    </div>
+                </div>
+
+                <!-- Show posts button -->
+                <div class="flex justify-center mt-4">
+                    <button class="text-blue-500 hover:underline">Show 214
+                        posts</button>
+                </div>
+
+                <!-- Posts -->
+                <div class="space-y-3 mt-3">
+
+                    <!-- First Post -->
+                    <div class="bg-gray-900 hover:bg-gray-800 cursor-pointer rounded-lg p-4">
+                        <div class="flex items-start space-x-4">
+                            <img src="https://pbs.twimg.com/profile_images/1815749056821346304/jS8I28PL_400x400.jpg"
+                                alt="Elon Musk" class="rounded-full w-12 h-12">
+                            <div class="w-full">
+                                <div class="flex items-center space-x-2 border-b border-gray-700">
+                                    <a href="#" class="font-bold hover:underline">Elon Musk</a>
+                                    <span class="text-gray-400"> · 4h</span>
+                                </div>
+                                <p
+                                    class="mt-1">Department<br>Of<br>Government<br>Efficiency</p>
+                                <!-- Interactions -->
+                                <div class="flex w-full cursor-default mt-3 text-gray-400">
+                                    <div class="flex items-center mr-auto cursor-pointer hover:text-red-500">
+                                        <i class="fa fa-heart"></i>
+                                        <span class="ml-1">81K</span>
+                                    </div>
+                                    <div class="flex items-center m-auto cursor-pointer hover:text-blue-500">
+                                        <i class="fa fa-comment"></i>
+                                        <span class="ml-1">6.3K</span>
+                                    </div>
+                                    <div class="flex items-center ml-auto cursor-pointer hover:text-green-700">
+                                        <i class="fa fa-chart-bar"></i>
+                                        <span class="ml-1">10M</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- second Post -->
+                    <div class="bg-gray-900 hover:bg-gray-800 cursor-pointer rounded-lg p-4">
+                        <div class="flex items-start space-x-4">
+                            <img src="https://pbs.twimg.com/profile_images/1804619119662108672/h8r5-An1_400x400.jpg"
+                                alt="Elon Musk" class="rounded-full w-12 h-12">
+                            <div class="w-full">
+                                <div class="flex items-center space-x-2 border-b border-gray-700">
+                                    <a href="#" class="font-bold hover:underline">Dylan Madden</a>
+                                    <span class="text-gray-400"> · Sep 12</span>
+                                </div>
+                                <p
+                                    class="mt-1">The idiot who takes action beats the genius who’s scared
+<br><br>
+                                    100% of the time</p>
+                                <!-- Interactions -->
+                                <div class="flex w-full cursor-default mt-3 text-gray-400">
+                                    <div class="flex items-center mr-auto cursor-pointer hover:text-red-500">
+                                        <i class="fa fa-heart"></i>
+                                        <span class="ml-1">984</span>
+                                    </div>
+                                    <div class="flex items-center m-auto cursor-pointer hover:text-blue-500">
+                                        <i class="fa fa-comment"></i>
+                                        <span class="ml-1">62</span>
+                                    </div>
+                                    <div class="flex items-center ml-auto cursor-pointer hover:text-green-700">
+                                        <i class="fa fa-chart-bar"></i>
+                                        <span class="ml-1">19.3K</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Third Post -->
+                    <div class="bg-gray-900 hover:bg-gray-800 cursor-pointer rounded-lg p-4">
+                        <div class="flex items-start space-x-4">
+                            <img src="https://pbs.twimg.com/profile_images/1815749056821346304/jS8I28PL_400x400.jpg"
+                                alt="Elon Musk" class="rounded-full w-12 h-12">
+                            <div class="w-full">
+                                <div class="flex items-center space-x-2 border-b border-gray-700">
+                                    <a href="#" class="font-bold hover:underline">Elon Musk</a>
+                                    <span class="text-gray-400"> · 4h</span>
+                                </div>
+                                <p
+                                    class="mt-1 pb-1">😂</p>
+                                    <img src="https://pbs.twimg.com/media/GXVa_VSbgAIxOET?format=jpg&name=small" alt="post image" class="rounded-lg">
+                                <!-- Interactions -->
+                                <div class="flex w-full cursor-default mt-3 text-gray-400">
+                                    <div class="flex items-center mr-auto cursor-pointer hover:text-red-500">
+                                        <i class="fa fa-heart"></i>
+                                        <span class="ml-1">225K</span>
+                                    </div>
+                                    <div class="flex items-center m-auto cursor-pointer hover:text-blue-500">
+                                        <i class="fa fa-comment"></i>
+                                        <span class="ml-1">8.9K</span>
+                                    </div>
+                                    <div class="flex items-center ml-auto cursor-pointer hover:text-green-700">
+                                        <i class="fa fa-chart-bar"></i>
+                                        <span class="ml-1">19M</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- forth Post -->
+                    <div class="bg-gray-900 hover:bg-gray-800 cursor-pointer rounded-lg p-4">
+                        <div class="flex items-start space-x-4">
+                            <img src="https://pbs.twimg.com/profile_images/1799815164281135104/zpquj6rZ_400x400.jpg"
+                                alt="Elon Musk" class="rounded-full w-12 h-12">
+                            <div class="w-full">
+                                <div class="flex items-center space-x-2 border-b border-gray-700">
+                                    <!-- Student name -->
+                                    <a href="#" class="font-bold hover:underline">Kevin Szabo</a>
+                                    <span class="text-gray-400"> · Sep 11</span>
+                                </div>
+                                <p class="mt-1">I love small accounts. <br><br>
+
+                                    Grinding alone but nobody listening to them. <br><br>
+                                    
+                                    I want to say thank you for your content. <br><br>
+                                    
+                                    Give them some love, you'll make it soon.</p>
+                                <!-- Interactions -->
+                                <div class="flex w-full cursor-default mt-3 text-gray-400">
+                                    <div class="flex items-center mr-auto cursor-pointer hover:text-red-500">
+                                        <i class="fa fa-heart"></i>
+                                        <span class="ml-1">1.1K</span>
+                                    </div>
+                                    <div class="flex items-center m-auto cursor-pointer hover:text-blue-500">
+                                        <i class="fa fa-comment"></i>
+                                        <span class="ml-1">365</span>
+                                    </div>
+                                    <div class="flex items-center ml-auto cursor-pointer hover:text-green-700">
+                                        <i class="fa fa-chart-bar"></i>
+                                        <span class="ml-1">21.9k</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
